@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 what does a build script / tool do\
+\
+something to automatically manipulate code, clean, compile, unit test\
+they also create war files - this is needed for functional tests\
+putting stuff into to deploy it to the app container\
+starting functional tests\
+other tools like code coverage gets run\
+\
+difference in whether you deploy war depends on where you are working.  locally most of the time developers don't need to deploy because they are just running unit tests\
+\
+flavors of build scripts\
+mvn / ant\
+mvn = dependency management, downside is convention over configuration\
+ant = more free-form, doesn't have built in dependency management so you either hard code or use ivy, also has macros\
+\
+dependencies\
+compile time\
+unit tests\
+run time\
+deploy\
+and other (JSON, code coverage etc)\
+\
+pick a flavor (ANT)\
+best practices\
+\
+write a basic ant script to deploy our fake app\
+first step in this is to compile and then test\
+3 main targets - clean compile and test\
+\
+check in to source control\
+\
+now they need to automate it - so set up a CI tool - we think Go at this point\
+install go to their instance - both server and agent\
+go through Go Wizard to setup this first project\
+discuss the fact that you made a pipeline and what that is and what the philosophy around it is\
+talk about different flavors\
+what is an app container\
+here are some options: tomcat / jboss / web logic / web sphere / glass fish / jetty - talk about what they offer briefly\
+then choose tomcat\
+install tomcat\
+come back to build scripts\
+now we write a target that builds the war file\
+another target that deploys it to the app container\
+go to localhost and see the application\
+create next stage in Go, which automates the deployment\
+discuss the "real" automation tests get written process - but in our project we have some\
+run the automation tests on the instance to see they pass\
+then modify the target which was previously just deploying to also run these scripts (watch it pass)\
+then modify the stage in Go to do the same}
