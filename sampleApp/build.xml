@@ -254,4 +254,15 @@
     <target name="chrome-webdriver">
         <property name="webdriver.class" value="${chrome.webdriver.class}"/>
     </target>
+		<target name="jettyStartServer" depends="acceptance-jar, war">
+			<echo message="starting jetty"/>
+			<java classname="com.thoughtworks.JettyLauncher"
+							classpathref="acceptance.runtime.classpath" fork="true">
+					<arg value="-start"/>
+					<arg value="${application.port}"/>
+					<arg value="${jetty.stop.port}"/>
+					<arg value="${main.war}"/>
+			</java>
+	</target>
+
 </project>
