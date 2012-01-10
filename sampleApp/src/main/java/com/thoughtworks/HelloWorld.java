@@ -18,7 +18,7 @@ public class HelloWorld extends HttpServlet {
         writer.print(sayHello(request.getRequestURI(), request.getRemoteAddr()));
 
         writer.print("<br>");
-        writer.print("<IMG src=\"http://www.nmeaf.org/logo.gif\"/>");
+        writer.print("<IMG src=\"http://dp6pbil3m8tmg.cloudfront.net/images/carp-BL-MAIN-lowres_rescaled.png\"/>");
 
 
     }
