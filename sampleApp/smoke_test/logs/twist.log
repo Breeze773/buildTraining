@@ -1,0 +1,174 @@
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+7073 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+7152 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+7176 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-3-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+0    [pool-3-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+3931 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+4049 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+4084 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-3-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+0    [pool-3-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+7640 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+7830 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+7883 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+339  [pool-7-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+381  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** Execution of scenarios failed with the message: Unable to load suite configuration:applicationContext-suite.xml
+381  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** The exception was thrown was org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+381  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:78)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:554)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:528)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:363)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.thoughtworks.twist.core.container.SpringContainer.startSuite(SpringContainer.java:92)
+	at com.thoughtworks.twist.core.execution.stage.SuiteStartStage.execute(SuiteStartStage.java:35)
+	at com.thoughtworks.twist.messaging.service.remote.DefaultRemoteProcessService.runScenario(DefaultRemoteProcessService.java:250)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:37)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:1)
+	at com.thoughtworks.twist.messaging.event.AbstractEvent.execute(AbstractEvent.java:30)
+	at com.thoughtworks.twist.messaging.RemoteSession.messageReceived(RemoteSession.java:85)
+	at org.apache.mina.common.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:743)
+	at org.apache.mina.common.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:405)
+	at org.apache.mina.common.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:40)
+	at org.apache.mina.common.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:823)
+	at org.apache.mina.common.IoFilterEvent.fire(IoFilterEvent.java:54)
+	at org.apache.mina.common.IoEvent.run(IoEvent.java:62)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.runTask(UnorderedThreadPoolExecutor.java:480)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.run(UnorderedThreadPoolExecutor.java:435)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:142)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:182)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:161)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:69)
+	... 21 more
+
+383  [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+332  [pool-7-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+366  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** Execution of scenarios failed with the message: Unable to load suite configuration:applicationContext-suite.xml
+366  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** The exception was thrown was org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+366  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:78)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:554)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:528)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:363)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.thoughtworks.twist.core.container.SpringContainer.startSuite(SpringContainer.java:92)
+	at com.thoughtworks.twist.core.execution.stage.SuiteStartStage.execute(SuiteStartStage.java:35)
+	at com.thoughtworks.twist.messaging.service.remote.DefaultRemoteProcessService.runScenario(DefaultRemoteProcessService.java:250)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:37)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:1)
+	at com.thoughtworks.twist.messaging.event.AbstractEvent.execute(AbstractEvent.java:30)
+	at com.thoughtworks.twist.messaging.RemoteSession.messageReceived(RemoteSession.java:85)
+	at org.apache.mina.common.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:743)
+	at org.apache.mina.common.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:405)
+	at org.apache.mina.common.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:40)
+	at org.apache.mina.common.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:823)
+	at org.apache.mina.common.IoFilterEvent.fire(IoFilterEvent.java:54)
+	at org.apache.mina.common.IoEvent.run(IoEvent.java:62)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.runTask(UnorderedThreadPoolExecutor.java:480)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.run(UnorderedThreadPoolExecutor.java:435)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:142)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:182)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:161)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:69)
+	... 21 more
+
+368  [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+4302 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+4416 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+4425 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+4511 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+4628 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+4638 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+336  [pool-7-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+370  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** Execution of scenarios failed with the message: Unable to load suite configuration:applicationContext-suite.xml
+370  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** The exception was thrown was org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+370  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:78)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:554)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:528)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:363)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.thoughtworks.twist.core.container.SpringContainer.startSuite(SpringContainer.java:92)
+	at com.thoughtworks.twist.core.execution.stage.SuiteStartStage.execute(SuiteStartStage.java:35)
+	at com.thoughtworks.twist.messaging.service.remote.DefaultRemoteProcessService.runScenario(DefaultRemoteProcessService.java:250)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:37)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:1)
+	at com.thoughtworks.twist.messaging.event.AbstractEvent.execute(AbstractEvent.java:30)
+	at com.thoughtworks.twist.messaging.RemoteSession.messageReceived(RemoteSession.java:85)
+	at org.apache.mina.common.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:743)
+	at org.apache.mina.common.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:405)
+	at org.apache.mina.common.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:40)
+	at org.apache.mina.common.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:823)
+	at org.apache.mina.common.IoFilterEvent.fire(IoFilterEvent.java:54)
+	at org.apache.mina.common.IoEvent.run(IoEvent.java:62)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.runTask(UnorderedThreadPoolExecutor.java:480)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.run(UnorderedThreadPoolExecutor.java:435)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:142)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:182)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:161)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:69)
+	... 21 more
+
+372  [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+343  [pool-7-thread-1] WARN  org.springframework.util.SystemPropertyUtils  - Could not resolve placeholder 'platform' in [classpath:twist.${platform}.properties] as system property: neither system property nor environment variable found
+378  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** Execution of scenarios failed with the message: Unable to load suite configuration:applicationContext-suite.xml
+379  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - ** The exception was thrown was org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+379  [pool-1-thread-1] ERROR com.thoughtworks.twist.user  - org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:78)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:554)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:528)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:363)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.thoughtworks.twist.core.container.SpringContainer.startSuite(SpringContainer.java:92)
+	at com.thoughtworks.twist.core.execution.stage.SuiteStartStage.execute(SuiteStartStage.java:35)
+	at com.thoughtworks.twist.messaging.service.remote.DefaultRemoteProcessService.runScenario(DefaultRemoteProcessService.java:250)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:37)
+	at com.thoughtworks.twist.messaging.event.PlaybackAcknowledgement.execute(PlaybackAcknowledgement.java:1)
+	at com.thoughtworks.twist.messaging.event.AbstractEvent.execute(AbstractEvent.java:30)
+	at com.thoughtworks.twist.messaging.RemoteSession.messageReceived(RemoteSession.java:85)
+	at org.apache.mina.common.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:743)
+	at org.apache.mina.common.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:405)
+	at org.apache.mina.common.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:40)
+	at org.apache.mina.common.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:823)
+	at org.apache.mina.common.IoFilterEvent.fire(IoFilterEvent.java:54)
+	at org.apache.mina.common.IoEvent.run(IoEvent.java:62)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.runTask(UnorderedThreadPoolExecutor.java:480)
+	at org.apache.mina.filter.executor.UnorderedThreadPoolExecutor$Worker.run(UnorderedThreadPoolExecutor.java:435)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.FileNotFoundException: class path resource [twist.${platform}.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:142)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:182)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:161)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:69)
+	... 21 more
+
+380  [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+5549 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+5722 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+5732 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+0    [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of 1 scenario(s) has started.
+4957 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenario 'HelloWorld.scn' started.
+5108 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Passed execution of scenario 'HelloWorld.scn'.
+5117 [pool-1-thread-1] INFO  com.thoughtworks.twist.user  - ** Execution of scenarios has ended.

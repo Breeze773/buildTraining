@@ -1,0 +1,4 @@
+<testsuite errors="0" failures="0" hostname="mq6991" name="HelloWorld.scn" tests="1" time="4.537" timestamp="2011-08-18T02:11:26">
+  <properties />
+  <testcase classname="com.thoughtworks.twist.core.execution.ant.XMLJunitOutputListener$TestWrapper" name="HelloWorld.scn" time="4.537" />
+</testsuite>

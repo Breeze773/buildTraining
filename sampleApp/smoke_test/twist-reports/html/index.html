@@ -1,0 +1,344 @@
+<html xmlns='http://www.w3.org/1999/xhtml'><head>
+<title>Twist Test Results</title>
+<meta content='no-cache' http-equiv='cache-control'/>
+<meta content='no-cache' http-equiv='pragma'/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type='text/css' media='screen'>
+	#logo { height: 80px; width: 100%; background: url(junit-images/header.jpg) repeat-x;}
+	#page_wrapper { padding: 0 25px 0 25px; margin: 0;}
+	.back-to-top { margin: 10px 0 20px 0;}
+	.br { border: 1px solid #015b59 !important;}
+	.clear { clear: both; height: 0; visibility: none;}
+	.error-line { border: 1px solid #AA6270; background: #F06652; color: white; font-weight: bolder; font-size: 12px; padding: 0 0 0 5px;}
+	.printOnly { display: none;}
+	.scenario-table { width: 90%; border-top: 0px solid #ccc; border-right: 0px solid #ccc; padding: 0; margin: 0;}
+	.screenOnly {}
+	.summary-text { font-weight: bold; color: #669; font-size: 22px;}
+	a {white-space: nowrap;}		
+	body {font: normal 68% verdana, arial, helvetica;color: #000000; padding: 0; margin: 0;}
+	div#header #watermark { float: right; width: 118px; height: 80px; margin: 0; padding: 0; position: relative; background: url(junit-images/watermark.jpg) no-repeat 0 0;}
+	div#header h1 { margin: 0; padding: 3px 0 0 0; font-family: verdana, arial, helvetica; font-size: 12px; letter-spacing: 1px; color: #BACB8D; position: absolute; top: 49px; left: 15px; display: block; width: 95%; border-top: 1px solid #8BA87A; background: transparent;}
+	div#header { background: url(junit-images/header_logo.jpg) no-repeat 0 0; height: 80px; margin: 0 0 30px 0; position: relative;}
+	div#packages-module p { margin: 0; padding: 0 20px 0 20px;}
+	div#packages-module { width: 100%; margin: 0 0 30px 0;}
+	div#scenarios-module h2 { text-transform: capitalize;}
+	div#scenarios-module p { margin: 0; padding: 0 20px 0 20px;}
+	div#scenarios-module { width: 100%; margin: 0 0 30px 0;}
+	div#summary-module h2 { color: #666666; font-size: 18px; margin: 10px 20px 5px 20px; padding: 10px 0 0 0;}
+	div#summary-module p { padding: 0 20px 0 20px;}
+	div#summary-module table { margin: 0 0 0 20px; width: 445px;}
+	div#summary-module { width: 600px; padding: 0; margin: 0 0 20px 0; background: #E0DFD5;}
+	div#testcase-module { width: 100%; margin: 0 0 30px 0;}
+	div.expandable { display: none;}
+	div.scenario .thumbnail { border-width: 1px; border-style: solid; border-color: black;}
+	div.scenario h1 { font-size: 20px; margin: 20px 0 7px 0; padding: 0;}
+	div.scenario p { margin: 0 0 5px 0; font-size: 12px;}
+	div.scenario td { background: white;}
+	div.scenario { color: black; margin: 0 30px 20px 30px; padding: 10px; background: #FDFEF8; font-family: Arial, Helvetica, sans-serif; font-weight: lighter;}
+	h1 { font-size: 14px;}
+	h2 { margin: 0; font-size: 14px;}
+	h3 { margin-bottom: 0.5em; font: bold 100% verdana, arial, helvetica}
+	h4 { margin-bottom: 0.5em; font: bold 100% verdana, arial, helvetica}
+	h5 { margin-bottom: 0.5em; font: bold 100% verdana, arial, helvetica}
+	h6 { margin-bottom: 0.5em; font: bold 100% verdana, arial, helvetica}
+	p { margin: 0; padding: 0;}
+	table.center {margin-left:auto; margin-right:auto;}
+	table.data_table tr th {background: #4c6b8a; padding: 5px;}
+	table.test_details tr td,table.test_details tr th { font-size: 68%;}
+	table.details td {margin: 0; padding: 0}
+	table.details th {margin: 0; padding: 0}
+	table.details tr {margin: 0; padding: 0}
+	table.details .table-header h2 { padding: 2px 20px 0 20px; margin: 0; color: #666;}
+	table.details .table-header { background-color: #E0DFD5; padding: 0 0 5px 0;}
+	table.details tr td a:link,a:visited { color: #0000A0;}
+	table.details tr td {padding 0; margin 0;}
+	table.details tr th { font-weight: bold; text-align: left; color: #777; font-size: 12px;}
+	table.details { width: 100%;}
+	table.summary_details tr td a:hover { color: #AEAEAE;}
+	table.summary_details tr td { border-left: 1px solid #E0DFD5; border-bottom: 1px solid #E0DFD5;}
+	table.summary_details tr th { font-weight: bold; text-align: left; background: #F1F0EC; color: #777; font-size: 12px; border-bottom: 1px solid #E0DFD5; border-left: 1px solid #E0DFD5;}
+	table.summary_details { width: 100%; border-right: 1px solid #E0DFD5;}	
+	table.scenario-table tbody { margin: 0; padding: 0; border: 0; background: green;}
+	ul { margin: 5px 0 0 25px; padding: 0;}
+	table.scenario_list { border: 0px; }
+	table.scenario_list tr td { padding: 5px;}
+</style>
+
+<style type='text/css' media='print'>
+	#logo { height: 80px; width: 100%; background: url(junit-images/header.jpg) repeat-x;}
+	#page_wrapper { padding: 0; margin: 0;}
+	.back-to-top { display: none;}
+	.error-line { border: 1px solid #FFD8B0; background: #FFEAD5;}
+	.printOnly { }
+	.scenario-table { width: 90%; border-top: 1px solid #ccc; border-right: 1px solid #ccc;}
+	.screenOnly { display: none;}
+	.table-header h2 { margin: 6px 0 0 0;}
+	.usercomment { background-color:#E4F3D3; 	padding:5px; 	border:1px solid; display:block;}
+	a { text-decoration: none; color: black;}
+	body { background: transparent; font-size: 10px; font-family: Arial, Helvetica, sans-serif;}
+	div#header #watermark { float: right; width: 118px; height: 80px; margin: 0; padding: 0; position: relative; background: url(junit-images/watermark.jpg) no-repeat 0 0;}
+	div#header h1 { margin: 0; padding: 3px 0 0 0; font-family: verdana, arial, helvetica; font-size: 12px; letter-spacing: 1px; color: #BACB8D; position: absolute; top: 49px; left: 15px; display: block; width: 95%; border-top: 1px solid #8BA87A;}
+	div#header { background: url(junit-images/header_logo.jpg) no-repeat 0 0; height: 80px; margin: 0 0 30px 0; position: relative;}
+	div#scenarios-module h2 { text-transform: capitalize;}
+	div#summary-module h2 { margin: 10px 0 0 0;}
+	div.scenario { color: black; margin: 0 5px 2px 5px; padding: 10px; background: #FDFEF8; border: 1px solid #D7E1D1;}
+	div.scenario { padding: 0; margin: 0;}
+	h1 { font-size: 14px;}
+	h2 { font-size: 12px; margin: 0;}
+	h3 { font-size: 10px;}
+	p { font-size: 10px; margin: 0; padding: 0;}
+	table td { font-size: 10px;}
+	table th { font-size: 10px; font-weight: bolder; background: #E0DFD5;}
+	ul { margin: 10px 0 0 20px; padding: 0;}
+</style>
+
+<style type='text/css'>
+    #page-content div.code {font-size: 12px; margin: 0 0 0 20px; color: #FF0000;}
+	#page-content h3 {font-size: 14px; color: #7B823A; padding: 0 0 0 15px; font-weight: bolder; }
+	#page-content img {margin: 5px 0 0 20px; }
+	#page-content li {color: black; font-weight: bolder; font-size: 12px; }
+	#page-content table * {padding: 2px 10px 2px 10px; }
+	#page-content table th {background: #4c6b8a; color: #fff; }
+	#page-content table {border-collapse: collapse; border-spacing: 0px; font-size: 12px; margin: 10px 0 10px 20px; }
+	#page-content table td,#page-content table th {border-width: 1px; border-style: solid; border-color: #E0DFD5;}
+	#page-content ul li {margin: 0 0 0 20px; }
+	#page-content {margin: 20px; }
+	.ab-bg {background-color: transparent; }
+	.ab-corner {border-style: solid; border-color: #fff; overflow: hidden; background-color: transparent; display: block; font-size: 1px; margin-left: 0px; margin-right: 0px; }
+	.bolder {font-weight: bolder; }
+	.box-content h2 {font-size: 12px; }
+	.box-content ul li {margin: 0 0 0 20px; }
+	.box-content {padding: 0 20px 0 20px; }
+	.code {font-family: courier; font-size: 12px; }
+	.error_cell {	border: 1px solid #F7F9BC; 	background: #F7F9BC !important; 	color: black; 	font-weight: bolder; 	font-size: 12px; }
+	.failure_cell {	border: 1px solid #AA6270; 	background: #F09499 !important; 	color: black; 	font-weight: bolder; 	font-size: 12px; }
+	.lvl1 {border-width: 0px 5px; height: 1px; }
+	.lvl2 {border-width: 0px 3px; height: 1px; }
+	.lvl3 {border-width: 0px 2px; height: 1px; }
+	.lvl4 {border-width: 0px 1px; height: 2px; }
+	.note {font-style: oblique; }
+	.passed_cell {	font-size: 12px; 	background: #A3E4B0; 	padding: 5px; }
+	.preconditions {width: 100%; margin: 0 0 10px 0; background: #F8FAE8; }
+	.scenario_line_error {	solid #AA6270; 	background: #F7F9BC; 	color: black; 	font-weight: bolder; 	font-size: 12px;  padding:0 }
+	.scenario_line_failure {	solid #AA6270; 	background: #F09499;; 	color: black; 	font-weight: bolder; 	font-size: 12px; padding:0 }
+	.scenario_line_passed {	font-size: 12px; 	background: #A3E4B0; padding:0}
+	.scenario_line_norun {	font-size: 12px; 	background: white; padding:0 }
+	.tags .box-content h2, .preconditions .box-content h2 {display: inline; }
+	.tags .box-content ul li, .preconditions .box-content ul li {list-style-type: circle; display: inline; font-size: 12px; }
+	.tags .box-content ul, .preconditions .box-content ul {display: inline; }
+	.tags {width: 100%; margin: 0 0 10px 0; background: #DCDFC6; }
+	.usercomment { background-color:#E4F3D3; 	padding:5px; 	border:1px solid; }
+	.usercomment-link { 	color:#471DEF; }
+	body {color: #000; margin: 0; font-size: 13px; font-family: Arial; }
+	tr.error {height: 16px; background-color: #F7F9BC; font-weight: bolder; padding: 5px; border-bottom: 1px solid #E0DFD5; }
+	tr.failed {height: 16px; background-color: #F09499; font-weight: bolder; padding: 5px; border-bottom: 1px solid #E0DFD5; }
+	tr.passed {height: 16px; background-color: #A3E4B0; padding: 5px; border-bottom: 1px solid #E0DFD5; }
+	div.title {height: 16px; font-size: 12px; font-weight: bolder; text-align: center; }
+	h1 {font-size: 16px; font-weight: lighter; color: #005F5D; margin: 15px 0 5px 0; }
+	p {margin: 0 0 10px 0; }
+	p, h1, h2, h3, h4, ul, li {margin: 0; padding: 0; }
+	.header_wrapper {                                                                                           
+      background: url(junit-images/bg_header_default.png) repeat-x;
+    }   
+          .header { 
+      background-image: url(junit-images/overlay_glass_100.png);
+      background-repeat: repeat-x;
+      background-position: center center;
+      padding: 15px;
+      overflow: hidden; /* this handles float encapsulation. as long as there is no height on the div, we can use this method */
+      color: #FFF; 
+    }
+    .header #logo {
+      display: block;
+      float: left;
+      height: 36px;
+      width: 133px;
+      background: url(junit-images/logo_twist.png) no-repeat;
+      border-right: 1px solid #555;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      margin-right: 20px;
+    }   
+    .header div {
+      margin-top: 8px;
+      font-family: "Helvetica Neue", Arial, Helvetica;
+      font-size: 16px; 
+      font-weight: 300; 
+    }
+</style>
+
+<script type="text/javascript">
+<!--
+  function replace(toId, fromId, count ) {
+  	  var fromdiv = document.getElementById(fromId);
+  	  if (count > 0) {
+      		document.getElementById(toId).innerHTML = fromdiv.innerHTML;
+      } else {
+      		document.getElementById(toId).innerHTML = '';
+      }
+  }
+  
+   function toggle(divId, aId) { 
+	toggleBetween(divId, aId, "show comments", "hide comments");
+  }
+  
+   function toggleBetween(divId, aId, show, hide) { 
+  	  var ele = document.getElementById(divId);
+	  var href = document.getElementById(aId);
+	  if (ele.style.display == "block") {
+		 ele.style.display = "none";
+		 href.innerHTML = show;
+	  } else { 
+	  	ele.style.display = "block";
+	  	href.innerHTML = hide;
+	  }
+  }
+
+    
+   function toggleStackTrace(divId, aId) { 
+	toggleBetween(divId, aId, "show stack trace", "hide stack trace");
+  }
+  
+ 
+-->
+
+</script>
+
+
+</head>
+    <body onload="replace('empty','alllist',1);">
+        <div class="header_wrapper"><div class="header">
+            <a href="#" id="logo"></a>
+            <div> Twist Test Results </div>
+            <br class='clear' />
+          </div></div>
+
+        <br/>
+        <div id='page_wrapper'>
+          <div id='summary-module'>
+            <div class="ab-bg">
+    <span class="ab-corner lvl1" style=""></span>
+    <span class="ab-corner lvl2" style=""></span>
+    <span class="ab-corner lvl3" style=""></span>
+    <span class="ab-corner lvl4" style=""></span>
+</div>
+            <h2>Summary</h2>
+            <p>Total scenario(s) in the project : <b>1</b></p>
+            
+                        	<p>Identified <b>1</b> scenario(s) matching
+            	            	            	            		the tag expression <b>!in-progress</b>
+            	            	</p>
+                                    
+            <br/>
+            <table cellspacing='0' class='summary_details' border='0' cellpadding='5'>
+              <tr valign='top'>
+                <th>Scenario(s) Executed</th>
+                <th>Errors</th>
+                <th>Failures</th>
+                <th>Success Rate</th>
+                <th>Time</th>
+              </tr>
+              <tr valign='top' class='Failure'>
+                <th><a href="" onclick="replace('empty', 'alllist',1); return false;">1</a></th>
+                <th><a href="" onclick="replace('empty', 'errorlist', 0); return false;">0</a></th>
+                <th><a href="" onclick="replace('empty', 'faillist', 0); return false;">0</a></th>
+                <th>100%</th>
+                <th>00:00:04</th>
+              </tr>
+            </table>
+            <br/>
+                        <p>Note: <i>failures</i> are anticipated and checked with assertions while <i>errors</i> are unanticipated.</p>
+            <br/>
+            <div class="ab-bg">
+    <span class="ab-corner lvl4" style=""></span>
+    <span class="ab-corner lvl3" style=""></span>
+    <span class="ab-corner lvl2" style=""></span>
+    <span class="ab-corner lvl1" style=""></span>
+</div>
+          </div>
+          <div class='clear'></div>
+          <div id='scenarios-module'>
+            <div id="empty" style="text-align:center;border: 0px;">&nbsp;</div>
+            <div id="faillist" style="text-align:center; display:none;">
+              <table class="details" cellspacing="0" border="0">
+  <th colspan="2" style="text-align:center;">
+              <div class='table-header'><div class="ab-bg">
+    <span class="ab-corner lvl1" style=""></span>
+    <span class="ab-corner lvl2" style=""></span>
+    <span class="ab-corner lvl3" style=""></span>
+    <span class="ab-corner lvl4" style=""></span>
+</div>
+<a name=''></a><h2>Failed Scenarios</h2></div>
+  </th>
+  <tr>
+    <td style="vertical-align:top;border-left: 1px solid #E0DFD5;border-bottom: 1px solid #E0DFD5;font-size:68%;" class="screenOnly">
+    <div id="scenario scroll bar" style="text-align:center; overflow:auto; height:600px;width:450px;">
+    <table width=100%; class="scenario_list" cellspacing="1" style="font-size:100%;">
+          </table>
+    </div>
+    </td>
+    <td width="68%" style="vertical-align:top;border-left: 1px solid #E0DFD5;border-right: 1px solid #E0DFD5;border-bottom: 1px solid #E0DFD5;">
+      <div id="failed" style="display:;font-size:68%">&nbsp;Test results</div>
+          </td>
+  </tr>
+</table>
+            </div>
+            <div id="alllist" style="text-align:center; display:none;">
+              <table class="details" cellspacing="0" border="0">
+  <th colspan="2" style="text-align:center;">
+              <div class='table-header'><div class="ab-bg">
+    <span class="ab-corner lvl1" style=""></span>
+    <span class="ab-corner lvl2" style=""></span>
+    <span class="ab-corner lvl3" style=""></span>
+    <span class="ab-corner lvl4" style=""></span>
+</div>
+<a name=''></a><h2>All Scenarios</h2></div>
+  </th>
+  <tr>
+    <td style="vertical-align:top;border-left: 1px solid #E0DFD5;border-bottom: 1px solid #E0DFD5;font-size:68%;" class="screenOnly">
+    <div id="scenario scroll bar" style="text-align:center; overflow:auto; height:600px;width:450px;">
+    <table width=100%; class="scenario_list" cellspacing="1" style="font-size:100%;">
+            <tr class="passed">
+        <td>
+	        <a href ="" onclick="replace('all','all1',1);return false;">HelloWorld.scn</a>
+        </td>
+        <td>00:00:04</td>
+      </tr>
+          </table>
+    </div>
+    </td>
+    <td width="68%" style="vertical-align:top;border-left: 1px solid #E0DFD5;border-right: 1px solid #E0DFD5;border-bottom: 1px solid #E0DFD5;">
+      <div id="all" style="display:;font-size:68%">&nbsp;Test results</div>
+            <div id="all1" class="printOnly"><div id='page-content'><div id='listid'><div class='title'>HelloWorld</div><br/></div><div class='tags'><div class='ab-bg'><span class='ab-corner lvl1'></span><span class='ab-corner lvl2'></span><span class='ab-corner lvl3'></span><span class='ab-corner lvl4'></span></div><div class='box-content'><h2>Tags: </h2><ul></ul></div><div class='ab-bg'><span class='ab-corner lvl4'></span><span class='ab-corner lvl3'></span><span class='ab-corner lvl2'></span><span class='ab-corner lvl1'></span></div></div><div class='preconditions'><div class='ab-bg'><span class='ab-corner lvl1'></span><span class='ab-corner lvl2'></span><span class='ab-corner lvl3'></span><span class='ab-corner lvl4'></span></div><div class='box-content'><h2>Context: </h2><ul></ul></div><div class='ab-bg'><span class='ab-corner lvl4'></span><span class='ab-corner lvl3'></span><span class='ab-corner lvl2'></span><span class='ab-corner lvl1'></span></div></div><div class='list'><h3>HelloWorld:</h3><ul><li class='scenario_line_passed'>go to site </li><li class='scenario_line_passed'>Validate that &quot;Hello World&quot; is visible </li></ul></div></div></div>
+          </td>
+  </tr>
+</table>
+            </div>
+            <div id="errorlist" style="text-align:center; display:none;">
+              <table class="details" cellspacing="0" border="0">
+  <th colspan="2" style="text-align:center;">
+              <div class='table-header'><div class="ab-bg">
+    <span class="ab-corner lvl1" style=""></span>
+    <span class="ab-corner lvl2" style=""></span>
+    <span class="ab-corner lvl3" style=""></span>
+    <span class="ab-corner lvl4" style=""></span>
+</div>
+<a name=''></a><h2>Error Scenarios</h2></div>
+  </th>
+  <tr>
+    <td style="vertical-align:top;border-left: 1px solid #E0DFD5;border-bottom: 1px solid #E0DFD5;font-size:68%;" class="screenOnly">
+    <div id="scenario scroll bar" style="text-align:center; overflow:auto; height:600px;width:450px;">
+    <table width=100%; class="scenario_list" cellspacing="1" style="font-size:100%;">
+          </table>
+    </div>
+    </td>
+    <td width="68%" style="vertical-align:top;border-left: 1px solid #E0DFD5;border-right: 1px solid #E0DFD5;border-bottom: 1px solid #E0DFD5;">
+      <div id="errored" style="display:;font-size:68%">&nbsp;Test results</div>
+          </td>
+  </tr>
+</table>
+            </div>
+          </div>
+          <div class='back-to-top'><a href='#top'>Back to top</a></div>          
+        </div>
+    </body>
+</html>
