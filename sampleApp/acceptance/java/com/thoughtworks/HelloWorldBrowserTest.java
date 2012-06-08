@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 public class HelloWorldBrowserTest {
     private WebDriver driver;
     private String TEST_URL = System.getProperty(
-            "application.url", "http://localhost:8080/helloworld");
+            "application.url", "");
 
     @Before
     public void setup() throws Exception {
