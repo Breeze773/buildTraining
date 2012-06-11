@@ -1,0 +1,6 @@
+<project name="helloworld" default="dev">
+
+    <target name="init">
+        <mkdir dir="target"/>
+    </target>
+</project>
