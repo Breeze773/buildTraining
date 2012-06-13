@@ -6,10 +6,12 @@
     <property name="main.src.dir" value="${basedir}/src/main/java"/>
     <property name="unit.src.dir" value="${basedir}/src/unit/java"/>
     <property name="acceptance.src.dir" value="${basedir}/src/acceptance/java"/>
+    <property name="web.dir" value="${basedir}/web"/>
 
     <!-- Output Directories -->
     <property name="target.dir" value="${basedir}/target"/>
     <property name="classes.dir" value="${target.dir}/classes"/>
+    <property name="test-classes.dir" value="${target.dir}/test"/>
     <property name="dist.dir" value="${target.dir}/dist"/>
     <property name="reports.dir" value="${target.dir}/reports"/>
     <property name="lib.dir" value="${basedir}/lib"/>
@@ -24,17 +26,45 @@
         <fileset dir="${lib.dir}/build" includes="*.jar"/>
     </path>
 
+    <path id="test.classpath">
+        <fileset dir="${lib.dir}/tools">
+            <include name="junit-4.5.jar"/>
+            <include name="mockito-all-1.7.jar"/>
+        </fileset>
+    </path>
+
+    <path id="test.compile.classpath">
+        <pathelement location="${main.jar}"/>
+        <path refid="main.compile.classpath"/>
+        <path refid="test.classpath"/>
+    </path>
+
+    <path id="test.runtime.classpath">
+        <path refid="test.compile.classpath"/>
+        <pathelement location="${unit.jar}"/>
+    </path>
+
+
+
     <target name="clean" description="Deletes the target directory and all its contents. ">
         <delete dir="${target.dir}"/>
     </target>
 
-    <target name="dev" depends="jarApp" description="The default target to perform all pre-commit operations." >
+    <target name="dev" depends="warApp" description="The default target to perform all pre-commit operations." >
     </target>
 
     <target name="compile" description="Compiles source code for the Application." >
         <mkdir dir="${classes.dir}"/>
         <javac srcdir="${main.src.dir}" destdir="${classes.dir}"
                classpathref="main.compile.classpath"
+               debug="true"
+               includeantruntime="false"/>
+    </target>
+
+    <target name="compile-tests" description="Compiles Junit source code for the unit tests." >
+        <mkdir dir="${test-classes.dir}"/>
+        <javac srcdir="${unit.src.dir}" destdir="${test-classes.dir}"
+               classpathref="test.compile.classpath"
                debug="true"
                includeantruntime="false"/>
     </target>
@@ -48,5 +78,17 @@
         </jar>
     </target>
 
+
+
+    <target name="warApp" depends="jarApp" description="Create distributable package">
+        <echo message="Packaging for build label ${build.label}"/>
+        <mkdir dir="${dist.dir}"/>
+        <war warfile="${main.war}" webxml="${web.dir}/WEB-INF/web.xml">
+            <manifest>
+                <attribute name="Label" value="${build.label}"/>
+            </manifest>
+            <lib file="${main.jar}"/>
+        </war>
+    </target>
 
 </project>
