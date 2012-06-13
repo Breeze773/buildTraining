@@ -50,10 +50,10 @@
         <delete dir="${target.dir}"/>
     </target>
 
-    <target name="dev" depends="warApp" description="The default target to perform all pre-commit operations." >
+    <target name="dev" depends="war-app" description="The default target to perform all pre-commit operations." >
     </target>
 
-    <target name="compile" description="Compiles source code for the Application." >
+    <target name="compile-app" description="Compiles source code for the Application." >
         <mkdir dir="${classes.dir}"/>
         <javac srcdir="${main.src.dir}" destdir="${classes.dir}"
                classpathref="main.compile.classpath"
@@ -69,7 +69,7 @@
                includeantruntime="false"/>
     </target>
 
-    <target name="jarApp" depends="compile" >
+    <target name="jar-app" depends="compile-app" >
         <jar destfile="${main.jar}" basedir="${classes.dir}">
             <manifest>
                 <attribute name="Build-Label"
@@ -80,7 +80,7 @@
 
 
 
-    <target name="warApp" depends="jarApp" description="Create distributable package">
+    <target name="war-app" depends="jar-app" description="Create distributable package">
         <echo message="Packaging for build label ${build.label}"/>
         <mkdir dir="${dist.dir}"/>
         <war warfile="${main.war}" webxml="${web.dir}/WEB-INF/web.xml">
