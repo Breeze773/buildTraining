@@ -24,7 +24,11 @@
         <fileset dir="${lib.dir}/build" includes="*.jar"/>
     </path>
 
-    <target name="dev" depends="compile, jarApp" description="The default target to perform all pre-commit operations." >
+    <target name="clean" description="Deletes the target directory and all its contents. ">
+        <delete dir="${target.dir}"/>
+    </target>
+
+    <target name="dev" depends="jarApp" description="The default target to perform all pre-commit operations." >
     </target>
 
     <target name="compile" description="Compiles source code for the Application." >
@@ -34,6 +38,7 @@
                debug="true"
                includeantruntime="false"/>
     </target>
+
     <target name="jarApp" depends="compile" >
         <jar destfile="${main.jar}" basedir="${classes.dir}">
             <manifest>
@@ -41,7 +46,7 @@
                            value="${build.label}"/>
             </manifest>
         </jar>
-
     </target>
+
 
 </project>
