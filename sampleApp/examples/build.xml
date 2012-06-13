@@ -1,5 +1,8 @@
 <project name="helloworld" default="dev">
 
+    <property name="app.name" value="${ant.project.name}"/>
+    <property name="build.label" value="${env.GO_PIPELINE_LABEL}"/>
+
     <property name="main.src.dir" value="${basedir}/src/main/java"/>
     <property name="unit.src.dir" value="${basedir}/src/unit/java"/>
     <property name="acceptance.src.dir" value="${basedir}/src/acceptance/java"/>
@@ -17,25 +20,27 @@
     <property name="unit.jar" value="${target.dir}/${app.name}-unit.jar"/>
     <property name="acceptance.jar" value="${target.dir}/${app.name}-acceptance.jar"/>
 
-    <path id="main.build.classpath">
+    <path id="main.compile.classpath">
         <fileset dir="${lib.dir}/build" includes="*.jar"/>
     </path>
 
-    <target name="dev" depends="compile" description="The default target to perform all pre-commit operations." >
+    <target name="dev" depends="compile, jarApp" description="The default target to perform all pre-commit operations." >
     </target>
 
     <target name="compile" description="Compiles source code for the Application." >
         <mkdir dir="${classes.dir}"/>
         <javac srcdir="${main.src.dir}" destdir="${classes.dir}"
-               classpathref="main.build.classpath"
+               classpathref="main.compile.classpath"
                debug="true"
                includeantruntime="false"/>
-        <!--<jar destfile="@{destfile}" basedir="${classes.dir}">-->
-            <!--<manifest>-->
-                <!--<attribute name="Build-Label"-->
-                           <!--value="${build.label}"/>-->
-            <!--</manifest>-->
-        <!--</jar>-->
+    </target>
+    <target name="jarApp" depends="compile" >
+        <jar destfile="${main.jar}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Build-Label"
+                           value="${build.label}"/>
+            </manifest>
+        </jar>
 
     </target>
 
