@@ -4,7 +4,7 @@
     <property name="build.label" value="${env.GO_PIPELINE_LABEL}"/>
 
     <property name="main.src.dir" value="${basedir}/src/main/java"/>
-    <property name="unit.src.dir" value="${basedir}/src/unit/java"/>
+    <property name="test.src.dir" value="${basedir}/src/unit/java"/>
     <property name="acceptance.src.dir" value="${basedir}/src/acceptance/java"/>
     <property name="web.dir" value="${basedir}/web"/>
 
@@ -50,7 +50,7 @@
         <delete dir="${target.dir}"/>
     </target>
 
-    <target name="dev" depends="war-app" description="The default target to perform all pre-commit operations." >
+    <target name="dev" depends="test-and-report, war-app" description="The default target to perform all pre-commit operations." >
     </target>
 
     <target name="compile-app" description="Compiles source code for the Application." >
@@ -61,9 +61,9 @@
                includeantruntime="false"/>
     </target>
 
-    <target name="compile-tests" description="Compiles Junit source code for the unit tests." >
+    <target name="compile-tests" depends="jar-app" description="Compiles Junit source code for the unit tests." >
         <mkdir dir="${test-classes.dir}"/>
-        <javac srcdir="${unit.src.dir}" destdir="${test-classes.dir}"
+        <javac srcdir="${test.src.dir}" destdir="${test-classes.dir}"
                classpathref="test.compile.classpath"
                debug="true"
                includeantruntime="false"/>
@@ -78,9 +78,47 @@
         </jar>
     </target>
 
+    <target name="jar-tests" depends="compile-tests" >
+        <jar destfile="${unit.jar}" basedir="${test-classes.dir}">
+            <manifest>
+                <attribute name="Build-Label"
+                           value="${build.label}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="test-and-report" depends="jar-tests" description="Run the unit tests and generate reports." >
+        <mkdir dir="${reports.dir}/unit"/>
+        <junit printsummary="yes" fork="true" haltonerror="false"
+               haltonfailure="false" forkmode="once">
+            <classpath>
+                <path refid="test.runtime.classpath"/>
+            </classpath>
+            <formatter type="xml"/>
+
+            <batchtest todir="${reports.dir}/unit"
+                       failureproperty="unit.test.failed">
+                <fileset dir="${test.src.dir}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+
+        <mkdir dir="${reports.dir}/unit-html"/>
+
+        <junitreport todir="${reports.dir}/unit-html">
+            <fileset dir="${reports.dir}/unit">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${reports.dir}/unit-html"/>
+        </junitreport>
+
+        <fail if="unit.test.failed" message="Unit tests failed"/>
+    </target>
 
 
-    <target name="war-app" depends="jar-app" description="Create distributable package">
+
+    <target name="war-app" depends="jar-app" description="Creates a distributable package">
         <echo message="Packaging for build label ${build.label}"/>
         <mkdir dir="${dist.dir}"/>
         <war warfile="${main.war}" webxml="${web.dir}/WEB-INF/web.xml">
