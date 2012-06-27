@@ -4,7 +4,7 @@
     <property name="build.label" value="${env.GO_PIPELINE_LABEL}"/>
 
     <property name="main.src.dir" value="${basedir}/src/main/java"/>
-    <property name="test.src.dir" value="${basedir}/src/unit/java"/>
+    <property name="test.src.dir" value="${basedir}/unittests/java"/>
     <property name="acceptance.src.dir" value="${basedir}/src/acceptance/java"/>
     <property name="web.dir" value="${basedir}/web"/>
 
